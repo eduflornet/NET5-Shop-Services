@@ -18,11 +18,11 @@ namespace ShopServices.Api.Author.Application
 
         public class Handler : IRequestHandler<Run>
         {
-            public readonly ContextAuthor _ContextAuthor;
+            public readonly ContextAuthor _contextAuthor;
 
             public Handler(ContextAuthor contextAuthor)
             {
-                _ContextAuthor = contextAuthor;
+                _contextAuthor = contextAuthor;
             }
 
             public async Task<Unit> Handle(Run request, CancellationToken cancellationToken)
@@ -35,8 +35,8 @@ namespace ShopServices.Api.Author.Application
                     AuthorBookGuid = Convert.ToString(Guid.NewGuid())
                 };
 
-                _ContextAuthor.AuthorBook.Add(authorBook);
-                var value = await _ContextAuthor.SaveChangesAsync();
+                _contextAuthor.AuthorBook.Add(authorBook);
+                var value = await _contextAuthor.SaveChangesAsync();
                 if (value > 0) return Unit.Value;
                 
                 throw new Exception("Could not insert the AuthorBook");

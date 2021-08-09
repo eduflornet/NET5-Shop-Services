@@ -1,7 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ShopServices.Api.Author.Application;
+using ShopServices.Api.Author.Model;
 
 namespace ShopServices.Api.Author.Controllers
 {
@@ -21,6 +23,19 @@ namespace ShopServices.Api.Author.Controllers
         {
             return await _mediator.Send(data);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<AuthorBook>>> GetAuthors()
+        {
+            return await _mediator.Send(new Query.AuthorList());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<AuthorBook>> GetAuthorBook(string id)
+        {
+            return await _mediator.Send(new QueryFilter.UniqueAuthor{AuthorBookGuid = id});
+        }
+
 
     }
 }
