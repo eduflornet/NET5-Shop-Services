@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using ShopServices.Api.Author.Application;
 using ShopServices.Api.Author.Persistence;
 
 namespace ShopServices.Api.Author
@@ -25,8 +27,9 @@ namespace ShopServices.Api.Author
             services.AddDbContext<ContextAuthor>(options =>
             {
                 options.UseNpgsql(Configuration.GetConnectionString("ConnectionDataBase"));
-                
             });
+            services.AddMediatR(typeof(New.Handler).Assembly);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "ShopServices.Api.Autor", Version = "v1"});

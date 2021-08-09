@@ -8,12 +8,12 @@ I have using the following tools:
 - Postman 8.9.1
 - NET5
 - Entity Framework Core 5
-- Hub Image Docker PostgreSQL 13.3
+- MediatR 9.0.0
+- Docker Hub Image PostgreSQL 13.3
   
-
 ## References:
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [MediatR](https://github.com/jbogard/MediatR)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Hub Image Docker PostgreSQL](https://hub.docker.com/_/postgres)
+- [Docker Hub Image PostgreSQL](https://hub.docker.com/_/postgres)

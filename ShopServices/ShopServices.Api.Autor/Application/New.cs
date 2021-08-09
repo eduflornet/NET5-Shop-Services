@@ -31,7 +31,8 @@ namespace ShopServices.Api.Author.Application
                 {
                     Name = request.Name,
                     LastName = request.LastName,
-                    BirthDate = request.BirthDate
+                    BirthDate = request.BirthDate,
+                    AuthorBookGuid = Convert.ToString(Guid.NewGuid())
                 };
 
                 _ContextAuthor.AuthorBook.Add(authorBook);
