@@ -31,7 +31,11 @@ namespace ShopServices.Api.Author
             {
                 options.UseNpgsql(Configuration.GetConnectionString("ConnectionDataBase"));
             });
+
+            // like MediatR, with AutoMapper it is not necessary to declare all the classes where it is referenced, only with this configuration it is enough
             services.AddMediatR(typeof(Insert.Handler).Assembly);
+            services.AddAutoMapper(typeof(Query.Handler));
+            
 
             services.AddSwaggerGen(c =>
             {
