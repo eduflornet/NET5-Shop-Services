@@ -19,7 +19,7 @@ namespace ShopServices.Api.Author.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Unit>> Create(New.Run data)
+        public async Task<ActionResult<Unit>> Create(Insert.Run data)
         {
             return await _mediator.Send(data);
         }

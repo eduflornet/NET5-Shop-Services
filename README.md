@@ -9,11 +9,13 @@ I have using the following tools:
 - NET5
 - Entity Framework Core 5
 - MediatR 9.0.0
+- Fluent Validation 10.3.0
 - Docker Hub Image PostgreSQL 13.3
   
 ## References:
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [MediatR](https://github.com/jbogard/MediatR)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/)
+- [Fluent Validation](https://fluentvalidation.net/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Docker Hub Image PostgreSQL](https://hub.docker.com/_/postgres)

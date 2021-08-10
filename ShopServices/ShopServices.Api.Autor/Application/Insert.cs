@@ -1,19 +1,30 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using FluentValidation;
 using MediatR;
 using ShopServices.Api.Author.Model;
 using ShopServices.Api.Author.Persistence;
 
 namespace ShopServices.Api.Author.Application
 {
-    public class New
+    public class Insert
     {
         public class Run : IRequest
         {
             public string Name { get; set; }
             public string LastName { get; set; }
             public DateTime? BirthDate { get; set; }
+        }
+
+        public class RunValidation : AbstractValidator<Run>
+        {
+            public RunValidation()
+            {
+                // Added validation rules
+                RuleFor(x => x.Name).NotEmpty();
+                RuleFor(x => x.LastName).NotEmpty();
+            }
         }
 
         public class Handler : IRequestHandler<Run>
