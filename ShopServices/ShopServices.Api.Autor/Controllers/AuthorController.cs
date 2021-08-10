@@ -31,7 +31,7 @@ namespace ShopServices.Api.Author.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AuthorBook>> GetAuthorBook(string id)
+        public async Task<ActionResult<AuthorDto>> GetAuthorBook(string id)
         {
             return await _mediator.Send(new QueryFilter.UniqueAuthor{AuthorBookGuid = id});
         }
