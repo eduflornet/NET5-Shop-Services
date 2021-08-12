@@ -28,7 +28,7 @@ I have using the following tools:
 - Fluent Validation 10.3.0
 - AutoMapper 8.1.1
 - Swashbuckle.AspNetCore 5.6.3
-- Docker Hub Image SQL Server
+- Docker Hub Image SQL Server 15.0.4
   
 ## References:
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
@@ -38,4 +38,7 @@ I have using the following tools:
 - [Swashbuckle and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio)
 - [PostgreSQL](https://www.postgresql.org/)
 - [SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15)
+- [Run SQL Server container images with Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash) 
 - [Docker Hub Image PostgreSQL](https://hub.docker.com/_/postgres)
+- [Dockerize PostgreSQL](https://docs.docker.com/samples/postgresql_service/)
+- [Local Development Set-Up of PostgreSQL with Docker](https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea)
