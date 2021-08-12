@@ -1,4 +1,4 @@
-# [CQRS PostgreSQL Microservice](https://github.com/eduflornet/NET5-Shop-Services)
+# [CQRS PostgreSQL Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopServices.Api.Autor)
 
 This demo contains a simple CQRS PostgreSQL Microservice REST-style API that can be used for CRUD operations on a Shop Book Author.
 
