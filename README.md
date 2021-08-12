@@ -16,7 +16,7 @@ I have using the following tools:
 
 # [CQRS SQL Server Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopServices.Api.Book)
 
-This demo contains a simple CQRS SQL Server Microservice REST-style API that can be used for the maintenance of the API.Author.
+This demo contains a simple CQRS SQL Server Microservice REST-style API that can be used for the maintenance of the API Author and Books.
 
 I have using the following tools:
 
