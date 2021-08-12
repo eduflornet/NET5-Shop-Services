@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "da0a4495-9c1f-4649-a578-ad2e9b8646d8",
+		"name": "CQRS.Microservices.PostgreSQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Johann\",\r\n    \"LastName\": \"\",\r\n    \"BirthDate\": \"1832-03-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62587/api/Author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62587",
+					"path": [
+						"api",
+						"Author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Author.GetAuthors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62587/api/Author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62587",
+					"path": [
+						"api",
+						"Author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Author.GetAuthorBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62587/api/Author/ec4f7a78-de69-4e57-93fb-7c2d93a33f7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62587",
+					"path": [
+						"api",
+						"Author",
+						"ec4f7a78-de69-4e57-93fb-7c2d93a33f7f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

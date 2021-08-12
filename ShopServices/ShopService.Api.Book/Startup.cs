@@ -1,3 +1,5 @@
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using ShopService.Api.Book.Application;
 using ShopService.Api.Book.Persistence;
 
 namespace ShopService.Api.Book
@@ -22,7 +25,9 @@ namespace ShopService.Api.Book
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            // when it starts, all the classes that inherit from the AbstractValidator class will be included automatically
+            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Insert>());
+
             services.AddDbContext<ContextLibrary>(opt =>
                 {
                     opt.UseSqlServer(Configuration.GetConnectionString("ConnectionDataBase"));
@@ -33,6 +38,7 @@ namespace ShopService.Api.Book
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopService.Api.Book", Version = "v1" });
             });
+            services.AddMediatR(typeof(Insert.Handler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

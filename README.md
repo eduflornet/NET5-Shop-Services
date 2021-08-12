@@ -13,6 +13,8 @@ I have using the following tools:
 - AutoMapper 8.1.1
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image PostgreSQL 13.3
+  
+  A [CQRS.Microservices.PostgreSQL.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/CQRS.Microservices.PostgreSQL.postman_collection) is also included with the basic structure to test each of the CRUD methods of the API.
 
 # [CQRS SQL Server Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopServices.Api.Book)
 
