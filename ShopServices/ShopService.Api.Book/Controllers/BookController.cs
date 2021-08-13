@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ShopService.Api.Book.Application;
@@ -22,5 +24,12 @@ namespace ShopService.Api.Book.Controllers
         {
             return await _mediator.Send(data);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<BookDto>>> GetBooks()
+        {
+            return await _mediator.Send(new Query.BookList());
+        }
+
     }
 }

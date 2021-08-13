@@ -1,3 +1,5 @@
+
+using System.Reflection;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -34,11 +36,17 @@ namespace ShopService.Api.Book
                 }
 
             );
+
+            // like MediatR, with AutoMapper it is not necessary to declare all the classes where it is referenced, only with this configuration it is enough
+            services.AddMediatR(typeof(Insert.Handler).Assembly);
+            services.AddAutoMapper(typeof(Query.Handler));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopService.Api.Book", Version = "v1" });
             });
-            services.AddMediatR(typeof(Insert.Handler).Assembly);
+            
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
