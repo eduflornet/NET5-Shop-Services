@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "5f70e0bc-2e7c-4dfe-ac17-605326561877",
+		"name": "CQRS.Microservices.SQLServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Johann\",\r\n    \"LastName\": \"\",\r\n    \"BirthDate\": \"1832-03-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62587/api/Author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62587",
+					"path": [
+						"api",
+						"Author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book.GetBooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:38282/api/Book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "38282",
+					"path": [
+						"api",
+						"Book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book.GetUniqueBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:62587/api/Book/45a1a096-f140-4b30-a842-50d293743910",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62587",
+					"path": [
+						"api",
+						"Book",
+						"45a1a096-f140-4b30-a842-50d293743910"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
