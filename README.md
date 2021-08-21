@@ -42,6 +42,7 @@ I have using the following tools:
 - Postman 8.9.1
 - NET5
 - Entity Framework Core 5
+- MySql EntityFrameworkCore 5.0.5
 - MediatR 9.0.0
 - Fluent Validation 10.3.0
 - AutoMapper 8.1.1

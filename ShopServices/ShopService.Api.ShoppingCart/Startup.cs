@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ShopService.Api.ShoppingCart.Persistence;
 
 namespace ShopService.Api.ShoppingCart
 {
@@ -27,6 +29,11 @@ namespace ShopService.Api.ShoppingCart
         {
 
             services.AddControllers();
+            services.AddDbContext<CartContext>(options =>
+            {
+                options.UseMySQL(Configuration.GetConnectionString("ConnectionDataBase"));
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopService.Api.ShoppingCart", Version = "v1" });

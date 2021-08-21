@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopService.Api.ShoppingCart.Model;
-using DbContext = System.Data.Entity.DbContext;
 
 namespace ShopService.Api.ShoppingCart.Persistence
 {
