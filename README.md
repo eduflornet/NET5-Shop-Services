@@ -14,7 +14,7 @@ I have using the following tools:
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image PostgreSQL 13.3
   
-  A [ShopServices.Api.Autor.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopServices.Api.Autor.postman_collection.json) is also included with the basic structure to test each of the CRUD methods of the API.
+  A [ShopServices.Api.Autor.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopServices.Api.Autor.postman_collection) is also included with the basic structure to test each of the CRUD methods of the API.
 
 # [CQRS SQL Server Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.Book)
 
@@ -32,7 +32,7 @@ I have using the following tools:
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image SQL Server 15.0.4
 
-A [ShopServices.Api.Book.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopServices.Api.Book.postman_collection.json) is also included with the basic structure to test each of the CRUD methods of the API.
+A [ShopServices.Api.Book.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopServices.Api.Book.postman_collection) is also included with the basic structure to test each of the CRUD methods of the API.
 
 # [CQRS MySQL Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.ShoppingCart)
 
@@ -51,7 +51,7 @@ I have using the following tools:
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image MySQL 8.0.26
 
-A [ShopService.Api.ShoppingCart.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopService.Api.ShoppingCart.postman_collection.json) is also included with the basic structure to test each of the CRUD methods of the API.
+A [ShopService.Api.ShoppingCart.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopService.Api.ShoppingCart.postman_collection) is also included with the basic structure to test each of the CRUD methods of the API.
   
 ## References:
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
