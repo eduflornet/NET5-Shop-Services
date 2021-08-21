@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using ShopService.Api.ShoppingCart.Application;
 using ShopService.Api.ShoppingCart.Persistence;
+using ShopService.Api.ShoppingCart.Remote.Interface;
 
 namespace ShopService.Api.ShoppingCart
 {
@@ -24,7 +25,7 @@ namespace ShopService.Api.ShoppingCart
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddScoped<IBookService, IBookService>();
             services.AddControllers();
             services.AddDbContext<CartContext>(options =>
             {

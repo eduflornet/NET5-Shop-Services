@@ -4,7 +4,7 @@ using ShopService.Api.ShoppingCart.Remote.Model;
 
 namespace ShopService.Api.ShoppingCart.Remote.Interface
 {
-    interface IBookService
+    public interface IBookService
     {
         Task<ResponseRemote> GetBook(Guid BookId);
     }
