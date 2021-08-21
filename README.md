@@ -32,6 +32,8 @@ I have using the following tools:
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image SQL Server 15.0.4
 
+A [ShopServices.Api.Book.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopServices.Api.Book.postman_collection.json) is also included with the basic structure to test each of the CRUD methods of the API.
+
 # [CQRS MySQL Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.ShoppingCart)
 
 This demo contains a simple CQRS MySQL Microservice REST-style API that can be used for the maintenance of the API Author and Books.
@@ -48,6 +50,8 @@ I have using the following tools:
 - AutoMapper 8.1.1
 - Swashbuckle.AspNetCore 5.6.3
 - Docker Hub Image MySQL 8.0.26
+
+A [ShopService.Api.ShoppingCart.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopService.Api.ShoppingCart.postman_collection.json) is also included with the basic structure to test each of the CRUD methods of the API.
   
 ## References:
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
