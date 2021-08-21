@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "337d7caf-dbf1-4a5a-91b7-6d23707455b3",
+		"name": "CQRS.Microservices.MySQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ShoppingCart.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CreationDate\": \"2021-08-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9313/api/ShoppingCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9313",
+					"path": [
+						"api",
+						"ShoppingCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShoppingCart.GetCart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9313/api/ShoppingCart/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9313",
+					"path": [
+						"api",
+						"ShoppingCart",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
