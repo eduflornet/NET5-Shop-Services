@@ -21,5 +21,10 @@ namespace ShopService.Api.ShoppingCart.Controllers
         {
             return await _mediator.Send(data);
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CartDto>> GetCart(int id)
+        {
+            return await _mediator.Send(new Query.Execute {CartSessionId = id});
+        }
     }
 }

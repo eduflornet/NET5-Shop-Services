@@ -44,7 +44,7 @@ namespace ShopService.Api.ShoppingCart.Application
                         CartSessionId = cartSessionId,
                         SelectedProduct = product
                     };
-                    _cartContext.ShoppingCartSessionDetail.Add(cartSessionDetail);
+                    _cartContext.CartSessionDetail.Add(cartSessionDetail);
 
                 }
 

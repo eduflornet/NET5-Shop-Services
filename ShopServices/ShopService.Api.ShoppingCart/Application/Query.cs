@@ -31,7 +31,7 @@ namespace ShopService.Api.ShoppingCart.Application
             {
                 var cartSession = await
                     _cartContext.CartSession.FirstOrDefaultAsync(x => x.CartSessionId == request.CartSessionId);
-                var cartSessionDetail = await _cartContext.ShoppingCartSessionDetail
+                var cartSessionDetail = await _cartContext.CartSessionDetail
                     .Where(x => x.CartSessionId == request.CartSessionId).ToListAsync();
                 var cartDetailDtoList = new List<CartDetailDto>();
 
