@@ -7,6 +7,6 @@ namespace ShopService.Api.ShoppingCart.Model
     {
         public int CartSessionId { get; set; }
         public DateTime CreationDate { get; set; }
-        public ICollection<ShoppingCartSessionDetail> DetailList { get; set; }
+        public ICollection<CartSessionDetail> DetailList { get; set; }
     }
 }

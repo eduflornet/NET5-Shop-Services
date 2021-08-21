@@ -38,13 +38,13 @@ namespace ShopService.Api.ShoppingCart.Application
                 int cartSessionId = cartSession.CartSessionId;
                 foreach (var product in request.ProductList)
                 {
-                    var shoppingCartSessionDetail = new ShoppingCartSessionDetail
+                    var cartSessionDetail = new CartSessionDetail
                     {
                         CreationDate = DateTime.Now,
                         CartSessionId = cartSessionId,
                         SelectedProduct = product
                     };
-                    _cartContext.ShoppingCartSessionDetail.Add(shoppingCartSessionDetail);
+                    _cartContext.ShoppingCartSessionDetail.Add(cartSessionDetail);
 
                 }
 

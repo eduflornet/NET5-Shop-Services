@@ -7,7 +7,7 @@ namespace ShopService.Api.ShoppingCart.Persistence
     {
         public CartContext(DbContextOptions<CartContext> options):base(options) { }
         public DbSet<CartSession> CartSession { get; set; }
-        public DbSet<ShoppingCartSessionDetail> ShoppingCartSessionDetail { get; set; }
+        public DbSet<CartSessionDetail> ShoppingCartSessionDetail { get; set; }
 
     }
 }
