@@ -1,3 +1,4 @@
+using System;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,10 @@ namespace ShopService.Api.ShoppingCart
                 options.UseMySQL(Configuration.GetConnectionString("ConnectionDataBase"));
             });
             services.AddMediatR(typeof(Insert.Handler).Assembly);
+            services.AddHttpClient("Books", config =>
+            {
+                config.BaseAddress = new Uri(Configuration["Services:Books"]);
+            });
 
             services.AddSwaggerGen(c =>
             {

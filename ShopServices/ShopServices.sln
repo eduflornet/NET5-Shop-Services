@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopServices.Api.Author", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopService.Api.Book", "ShopService.Api.Book\ShopService.Api.Book.csproj", "{BF36B775-2A94-4E9D-9F0D-2EE905D8CB24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopService.Api.ShoppingCart", "ShopService.Api.ShoppingCart\ShopService.Api.ShoppingCart.csproj", "{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopService.Api.ShoppingCart", "ShopService.Api.ShoppingCart\ShopService.Api.ShoppingCart.csproj", "{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
