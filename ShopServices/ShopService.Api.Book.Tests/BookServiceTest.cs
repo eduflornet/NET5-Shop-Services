@@ -44,9 +44,29 @@ namespace ShopService.Api.Book.Tests
                 .Setup(x => x.GetAsyncEnumerator(new System.Threading.CancellationToken()))
                 .Returns(new AsyncEnumerator<LibraryMaterial>(dataTest.GetEnumerator()));
 
+            // Added configuration that is necessary to be able to make filters in the context of Entity Framework
+            dbSet.As<IQueryable<LibraryMaterial>>().Setup(x => x.Provider)
+                .Returns(new AsyncQueryProvider<LibraryMaterial>(dataTest.Provider));
+
             var contextLibrary = new Mock<ContextLibrary>();
             contextLibrary.Setup(x => x.LibraryMaterial).Returns(dbSet.Object);
             return contextLibrary;
+        }
+
+        [Fact]
+        public async Task GetBookById()
+        {
+            var mockContext = CreateContext();
+            var mapperConfiguration = new MapperConfiguration(cfg => cfg.AddProfile(new MappingProfileTest()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var request = new QueryFilter.UniqueBook();
+            request.BookId = Guid.Empty;
+            var handler = new QueryFilter.Handler(mockContext.Object, mapper);
+            var book = await handler.Handle(request, new System.Threading.CancellationToken());
+
+            Assert.NotNull(book);
+            Assert.True(book.LibraryMaterialId == Guid.Empty);
+
         }
 
         [Fact]

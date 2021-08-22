@@ -15,5 +15,7 @@ namespace ShopService.Api.Book.Tests
         {
             return new AsyncEnumerator<T>(this.AsEnumerable().GetEnumerator());
         }
+
+        IQueryProvider IQueryable.Provider => new AsyncQueryProvider<T>(this);
     }
 }
