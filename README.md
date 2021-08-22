@@ -33,6 +33,16 @@ I have using the following tools:
 - Docker Hub Image SQL Server 15.0.4
 
 A [ShopServices.Api.Book.postman_collection](https://github.com/eduflornet/NET5-Shop-Services/blob/main/ShopServices/ShopService.Api.Book.postman_collection) is also included with the basic structure to test each of the CRUD methods of the API.
+# [CQRS SQL Server Microservice Unit Test](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.Book.Tests)
+
+This project contains the unit tests corresponding to the methods of the Book service.
+
+I have using the following tools:
+
+- xUnit 2.4.1
+- Moq 4.16.1
+- GenFu 1.6.0
+
 
 # [CQRS MySQL Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.ShoppingCart)
 
