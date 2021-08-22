@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopService.Api.Book", "Sho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopService.Api.ShoppingCart", "ShopService.Api.ShoppingCart\ShopService.Api.ShoppingCart.csproj", "{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopService.Api.Book.Tests", "ShopService.Api.Book.Tests\ShopService.Api.Book.Tests.csproj", "{D165CD4A-7E92-4F2A-811F-6484D1BC9189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9852E80-DD31-4198-93D5-7EC49AF0D6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D165CD4A-7E92-4F2A-811F-6484D1BC9189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D165CD4A-7E92-4F2A-811F-6484D1BC9189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D165CD4A-7E92-4F2A-811F-6484D1BC9189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D165CD4A-7E92-4F2A-811F-6484D1BC9189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
