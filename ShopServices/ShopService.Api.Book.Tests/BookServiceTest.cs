@@ -72,7 +72,7 @@ namespace ShopService.Api.Book.Tests
         [Fact]
         public async Task GetBooks()
         {
-            System.Diagnostics.Debugger.Launch();
+            
             var mockContext = CreateContext();
             var mapperConfiguration = new MapperConfiguration(cfg => cfg.AddProfile(new MappingProfileTest()));
             var mapper = mapperConfiguration.CreateMapper(); 
@@ -81,6 +81,27 @@ namespace ShopService.Api.Book.Tests
             var list = await handler.Handle(request, new System.Threading.CancellationToken());
 
             Assert.True(list.Any());
+
+        }
+
+        [Fact]
+        public async Task SaveBook()
+        {
+            System.Diagnostics.Debugger.Launch();
+            var options = new DbContextOptionsBuilder<ContextLibrary>()
+                .UseInMemoryDatabase(databaseName:"DataBaseBook")
+                .Options;
+
+            var context = new ContextLibrary(options);
+            var request = new Insert.Run();
+            request.Title = "Insert book in Microservice";
+            request.AuthorBookGuid = Guid.Empty;
+            request.PublicationDate = DateTime.Now;
+
+            var handler = new Insert.Handler(context);
+            var book = await handler.Handle(request, new System.Threading.CancellationToken());
+
+            Assert.True(condition: book != null);
 
         }
     }

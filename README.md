@@ -42,6 +42,7 @@ I have using the following tools:
 - xUnit 2.4.1
 - Moq 4.16.1
 - GenFu 1.6.0
+- Entity Framework Core in memory 5.0.9
 
 
 # [CQRS MySQL Microservice](https://github.com/eduflornet/NET5-Shop-Services/tree/main/ShopServices/ShopService.Api.ShoppingCart)
@@ -75,3 +76,7 @@ A [ShopService.Api.ShoppingCart.postman_collection](https://github.com/eduflorne
 - [Docker Hub Image PostgreSQL](https://hub.docker.com/_/postgres)
 - [Dockerize PostgreSQL](https://docs.docker.com/samples/postgresql_service/)
 - [Local Development Set-Up of PostgreSQL with Docker](https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea)
+- [GenFu is all about smartly building up objects to use for test and prototype data](https://github.com/MisterJames/GenFu)
+- [xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework](https://xunit.net/)
+- [moq is the most popular and friendly mocking library for .NET](https://github.com/moq/moq4)
+  
